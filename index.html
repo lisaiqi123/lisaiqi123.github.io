@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">现代浏览器博物馆</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="demo-navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">综述 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">简述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">特点 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#tab-Chrome">Chrome</a></li>
+                        <li><a href="#tab-Firefox">Firefox</a></li>
+                        <li><a href="#tab-IE">IE</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#about" id="about-btn">关于</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="img/周迅7.jpg" alt="...">
+            <div class="carousel-caption">
+                <h1>我是一个好好先生</h1>
+                <p>会卡聚划算大会上的的收看电视</p>
+                <p><a href="#" class="btn btn-primary" role="button">点我下载</a></p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/周迅26.jpg" alt="...">
+            <div class="carousel-caption">
+                <h1>Chrome</h1>
+                <p>谷歌浏览器，好用</p>
+                <p><a href="#" class="btn btn-primary" role="button">点我下载</a></p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/Eason.jpeg" alt="...">
+            <div class="carousel-caption">
+                <h1>Firefox</h1>
+                <p>火狐浏览器更好用</p>
+                <p><a href="#" class="btn btn-primary" role="button">点我下载</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">上一页</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">下一页</span>
+    </a>
+</div>
+<div class="container" id="summary_container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/1.jpg" alt="..." class="img-circle">
+            <h1>Firefox</h1>
+            <p>火狐浏览器更而额外任务sdfs放水电费水电费水电费水电费水电费是的水电费水电费是二好用</p>
+            <p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img src="img/1.jpg" alt="..." class="img-circle">
+            <h1>Firefox</h1>
+            <p>火狐浏览器更好用水电费水电费水电费是防守打法</p>
+            <p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img src="img/1.jpg" alt="..." class="img-circle">
+            <h1>Firefox</h1>
+            <p>火狐浏览器更水电费水电费水电费水电费水电费好用</p>
+            <p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+        </div>
+    </div>
+    <hr class="divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="tab-list">
+        <li class="active"><a href="#tab-Chrome" role="tab" data-toggle="tab">Chrome</a></li>
+        <li><a href="#tab-Firefox" role="tab" data-toggle="tab">Firefox</a></li>
+        <li><a href="#tab-IE" role="tab" data-toggle="tab">IE</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-Chrome">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>Chrome</h1>
+                    <p>火狐浏览器更水电费水电费水电费水电费水电费好用</p>
+                    <p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+                </div>
+                <div class="col-md-5">
+                    <img src="img/page_jt.png" alt="..." class="img-circle">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-Firefox">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/page_jt.png" alt="..." class="img-circle">
+                </div>
+                <div class="col-md-7">
+                    <h1>Firefox</h1>
+                    <p>火狐浏览器更水电费水电费水电费水电费水电费好用</p>
+                    <p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-IE">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>IE</h1>
+                    <p>火狐浏览器更水电费水电费水电费水电费水电费好用</p>
+                    <p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+                </div>
+                <div class="col-md-5">
+                    <img src="img/page_jt.png" alt="..." class="img-circle">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">标题一</a></h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">标题一对应的内容</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">标题二</a></h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">标题二对应的内容</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse"data-parent="#accordion"href="#collapseThree">标题三</a></h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">标题三对应的内容</div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <footer>
+        <p class="pull-right"><a href="#top">返回顶部</a></p>
+        <p>&copy;  李赛奇</p>
+    </footer>
+</div>
+
+<div class="modal fade" id="about">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">关于</h4>
+            </div>
+            <div class="modal-body">
+                <p>是大幅度发反反复复反复反复反复反复反复反复反复擦擦擦擦擦擦<br>擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦擦</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存修改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#demo-navbar .dropdown-menu a").click(function(){
+            var href = $(this).attr("href");
+            $("#tab-list a[href='"+href+"']").tab("show");
+        })
+
+    })
+</script>
+</html>

@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	padding-top: 50px;
+}
+.container-fluid{
+}
+div[class^="col-"]{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 1px solid #eee;
+	background: #ccc;
+}
+.carousel{
+	height: 500px;
+	background-color: #000;
+}
+.carousel .item{
+	height: 500px;
+	background-color: #000;
+}
+.carousel img{
+	width: 100%;
+}
+.carousel-caption p{
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 1.8;
+}
+.btn-primary{
+	margin-bottom: 20px;
+}
+#summary_container .col-md-4{
+	text-align: center;
+}
+#summary_container .col-md-4 img{
+	width: 50px;
+}
+hr .divider{
+	margin: 40px 0;
+}
+div[class^="col-"]{
+background-color: #fff;
+border: none;
+}
