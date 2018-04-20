@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_299283_idebr0qzp1yeewmi.css">
+    <link rel="stylesheet" href="../css/common/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/common/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/common/common-new.css">
+    <link rel="stylesheet" href="../css/common/flex.css">
+    <link rel="stylesheet" href="../css/kanjia.css">
+    <script>
+        var Width = window.innerWidth;
+        if (Width > 720) {
+            document.documentElement.style.fontSize = 192 + 'px';
+        } else {
+            document.documentElement.style.fontSize = ((Width / 375) * 100) + 'px';
+        }
+        window.onresize = function() {
+            var changeWidth = window.innerWidth;
+            if (changeWidth > 720) {
+                document.documentElement.style.fontSize = 192 + 'px';
+            } else {
+                document.documentElement.style.fontSize = ((changeWidth / 375) * 100) + 'px';
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+    <!-- Views -->
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages toolbar-through">
+                <div data-page="index" class="page personal-center">
+                    <div class="page-content infinite-scroll kj-bgcolor">
+                        <div class="kj-top">
+                            <div class="kj-goods">
+                                <div class="fl-row-leftNowrap kj-head">
+                                    <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                    <p class="fl-row-leftNowrap">“好货齐分享，一起来砍到最低价”</p>
+                                </div>
+                                <div href="javascript:;" class="goods-item tp external">
+                                    <a class="external" href="javascript:;"><img src="../images/kj-good.png" alt=""></a>
+                                    <div class="goods-des fl-column-justyB-start">
+                                        <a href="javascript:;" class="external name G-more-cloum G-col-2 G-Fsize-14 G-color-333">美的WKZM(E) 535升 对开门电冰箱 能操控 风冷无霜 大容量 美的WKZM(E) 535升 对开美的WKZM(E) 535升 对开</a>
+                                        <div class="fl-row-justy kj-joinNum">
+                                            <p class="money G-Fsize-15 G-color-red">
+                                                <span>￥13470.00</span>
+                                            </p>
+                                            <a class="external" href="javascript:;">9999人参与</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kj-status">
+                                <!-- 自己看到自己刚发起的 -->
+                                <div class="status1 fl-row-center-base"><span>已砍&nbsp;</span><span id="kanPrice">99.99</span><span>&nbsp;元，还能继续砍</span></div>
+                                <div class="status2 fl-row-justy">
+                                    <a href="javascript:;" class="external right-now" data-price="1399.00">现在就要</a>
+                                    <a href="javascript:;" class="external kan-more">分享给好友,再多砍一刀</a>
+                                </div>
+                                <div class="status3 fl-row-center-base">
+                                    <span>活动还剩<span id="time" data-time="80">00:00:00:00</span>结束，赶快砍价吧！</span>
+                                </div>
+                                <!-- 自己看到自己失败的 -->
+                                <!-- <div class="status1 fl-row-center-base"><span>砍价失败</span></div>
+                                <div class="status2 fl-row-justy">
+                                    <a href="kanjia-list.html" class="external more-acty kan-100">点击查看更多砍价活动</a>
+                                </div> -->
+                                <!-- 自己看到自己成功的 -->
+                                <!-- <div class="status1 fl-row-center-base"><span>已砍到最低价</span><span id="kanPrice">99.99</span><span>元</span></div>
+                                <div class="status2 fl-row-justy">
+                                    <a href="javascript:;" class="external more-acty kan-100">已砍到最低价，赶紧带走它</a>
+                                </div> -->
+                                <!-- 自己看到别人刚发起的 -->
+                                <!-- <div class="status1 fl-row-center-base"><span>已砍</span><span id="kanPrice">99.99</span><span>元，还能继续砍</span></div>
+                                <div class="status2 fl-row-justy">
+                                    <a href="javascript:;" class="external more-acty kan-100 help-kan">帮好友砍一刀</a>
+                                </div>
+                                <div class="status3 fl-row-center-base">
+                                    <span>活动还剩<span id="time" data-time="80">00:00:00:00</span>结束，赶快砍价吧！</span>
+                                </div> -->
+                                <!-- 自己看到帮别人砍过的 -->
+                                <!-- <div class="status1 fl-row-center-base"><span>已帮好友砍价</span></div>
+                                <div class="status2 fl-row-justy">
+                                    <a href="javascript:;" class="external more-acty kan-100">我也要参加</a>
+                                </div> -->
+                                <!-- 自己看到别人已砍价成功，自己不用帮砍了 -->
+                                <!-- <div class="status1 fl-row-center-base"><span>好友已砍价成功</span></div>
+                                <div class="status2 fl-row-justy">
+                                    <a href="javascript:;" class="external more-acty kan-100">我也要参加</a>
+                                </div> -->
+                                <div class="kj-list">
+                                    <div class="kj-title">帮砍好友</div>
+                                    <ul class="kj-plist">
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>骆驼</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>骆驼</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>骆驼</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>骆驼</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-bg.png" alt=""></span>
+                                                <span>飞到天边的鸟儿天边天边天边</span>
+                                            </p>
+                                            <span>砍掉4.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>飞到天边的鸟儿</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>飞到天边的鸟儿</span>
+                                            </p>
+                                            <span>砍掉2.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>飞到天边的鸟儿</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                        <li class="fl-row-justy">
+                                            <p class="fl-row-leftNowrap kj-phead">
+                                                <span class="fl-row-center"><img src="../images/kj-head.png" alt=""></span>
+                                                <span>飞到天边的鸟儿</span>
+                                            </p>
+                                            <span>砍掉24.12元</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部 -->
+            <div class="toolbar kj-ft">
+                <div class="toolbar-inner">
+                    <div class="fl-row-grid alert-guize">
+                        <span>活动规则</span><i class="icon icon-wentiquestions1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <input type="hidden" id="guize" value="1、钱钱钱钱钱<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰">
+    <script type="text/template" id="tempalte1">
+        <div class="model-share">
+            <p>您已砍&nbsp;<span>1000</span>&nbsp;元， 点击右上角继续分享</p>
+            <p>赶快邀请好友帮你砍价吧~~</p>
+        </div>
+    </script>
+    <script type="text/template" id="tempalte2">
+        <div class="model-share">
+            <p>您已砍&nbsp;<span>1399.00</span>&nbsp;元，赶快分享给好友吧</p>
+            <p>分享成功后可以再砍一刀哦~~</p>
+        </div>
+    </script>
+    <script type="text/template" id="tempalte3">
+        <div class="model-div">
+            <p class="model-now">当前价格&nbsp;<span>1211.00</span>&nbsp;元</p>
+            <p class="model-last">还没有到底价哦~</p>
+        </div>
+    </script>
+    <script type="text/template" id="tempalte4">
+        <a class="external" href="kanjia-list.html">现在带走</a>
+    </script>
+    <script type="text/template" id="tempalte5">
+        <div class="model-div">
+            <p class="model-now">成功帮好友砍下&nbsp;<span>9.99</span>&nbsp;元 </p>
+            <p class="model-last">你也可以免费参加砍价活动！~</p>
+        </div>
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_299283_idebr0qzp1yeewmi.js"></script>
+    <script src="http://captcha.luosimao.com/static/js/api.js "></script>
+    <script src="https://cdn.jsdelivr.net/jquery.form/4.2.1/jquery.form.min.js " integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer " crossorigin="anonymous "></script>
+    <script src="../js/framework7.min.js "></script>
+    <script src="../js/framework7.upscroller.js "></script>
+    <script src="../js/kanjia.js "></script>
+    <!-- //下面这个script仅仅在发起人自己砍价的时候才有，其他情况没有，所以条件判断一下-->
+    <script>
+        //刚进活动页面
+        myApp.modal({
+            afterText: $("#tempalte1").html(),
+        });
+    </script>
+</body>
+
+</html>
