@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/common/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/common/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/common/common-new.css">
+    <link rel="stylesheet" href="../css/common/flex.css">
+    <link rel="stylesheet" href="../css/dazhuanpan.css">
+    <script>
+        var Width = window.innerWidth;
+        if (Width > 720) {
+            document.documentElement.style.fontSize = 192 + 'px';
+        } else {
+            document.documentElement.style.fontSize = ((Width / 375) * 100) + 'px';
+        }
+        window.onresize = function() {
+            var changeWidth = window.innerWidth;
+            if (changeWidth > 720) {
+                document.documentElement.style.fontSize = 192 + 'px';
+            } else {
+                document.documentElement.style.fontSize = ((changeWidth / 375) * 100) + 'px';
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+    <!-- Views -->
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages">
+                <div data-page="index" class="page personal-center">
+                    <div class="page-content homebox">
+                        <!-- 标题 -->
+                        <div class="cover-div">
+                            <img src="../images/pan-title.gif" alt="">
+                        </div>
+                        <!--转盘-->
+                        <div class="banner">
+                            <div class="turnplate">
+                                <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+                                <img class="pointer" src="../images/GO.png">
+                            </div>
+                            <!-- <img id="scream" src="../images/bg8.png" alt="" class="hidden"> -->
+                            <img id="scream" src="../images/bg6.png" alt="" class="hidden">
+                            <!-- <img id="scream" src="../images/bg4.png" alt="" class="hidden"> -->
+                        </div>
+                        <!-- 参与人数及抽奖机会 -->
+                        <div class="template3">
+                            <p>已有256人参与</p>
+                            <p>您今天还有 <span id="awardNum">3</span> 次抽奖机会</p>
+                        </div>
+                        <div class="fl-row-justy template3">
+                            <a href="javascript:;" class="alert-guize">活动说明</a>
+                            <a href="javascript:;" class="alert-my">我的奖品</a>
+                        </div>
+                        <!-- 广告图 -->
+                        <div class="template4 fl-row-leftStartNowrap">
+                            <img src="../images/pic-activity.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/template" id="discription">
+        <div class="model-share">
+            <h3>活动奖品</h3>
+            <div class="model-second">
+                <p class="fl-row-leftStart"><span>一等奖</span><span>iPhoneX</span></p>
+                <p class="fl-row-leftStart"><span>二等奖</span><span>榨汁机</span></p>
+                <p class="fl-row-leftStart"><span>三等奖</span><span>电饭锅</span></p>
+            </div>
+            <h3>活动时间</h3>
+            <div class="model-second">
+                <p class="fl-row-leftStart">2018年4月15日 10:00 - 2018年4月17日 10:00</p>
+            </div>
+            <h3>活动说明</h3>
+            <div class="model-second">
+                <p>1.邀请好友一起砍价，24小时内看到最低价就可以以此价格下单</p>
+                <p>2.阿斯顿空间放卡罗傻到家啊塑料袋快放假阿是快递费见</p>
+                <p>3.啥地方少点啦看风景阿卢卡斯的减肥</p>
+                <p>4.阿斯顿法师打发士大夫阿斯顿发送到</p>
+                <p>5.阿里速度快及法律啥款到即发啊阿斯顿快放假是否</p>
+                <p>6.阿斯顿发斯蒂芬</p>
+                <p>7.完成下单即可完成所有操作</p>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="myAward">
+        <div class="model-share">
+            <!-- 没有抽奖记录 -->
+            <div class="model-no">
+                抱歉，暂无抽中奖品
+            </div>
+            <!-- 有抽奖记录 -->
+            <div class="model-item">
+                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                <p class="model-item3 fl-row-left">未领取</p>
+                <a class="external" href="javascript:;">兑换</a>
+            </div>
+            <div class="model-item">
+                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                <p class="model-item3 fl-row-left">未领取</p>
+                <a class="external gray" href="javascript:;">兑换</a>
+            </div>
+            <div class="model-item">
+                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                <p class="model-item3 fl-row-left">未领取</p>
+                <a class="external gray" href="javascript:;">兑换</a>
+            </div>
+            <div class="model-item">
+                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                <p class="model-item3 fl-row-left">未领取</p>
+                <a class="external" href="javascript:;">兑换</a>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="tempalte3">
+        <div class="model-div">
+            <p class="model-now">当前价格&nbsp;<span>1211.00</span>&nbsp;元</p>
+            <p class="model-last">还没有到底价哦~</p>
+        </div>
+    </script>
+    <script type="text/template" id="tempalte4">
+        <a class="external" href="kanjia-list.html">现在带走</a>
+    </script>
+    <script type="text/template" id="tempalte5">
+        <div class="model-div">
+            <p class="model-now">成功帮好友砍下&nbsp;<span>9.99</span>&nbsp;元 </p>
+            <p class="model-last">你也可以免费参加砍价活动！~</p>
+        </div>
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="http://captcha.luosimao.com/static/js/api.js "></script>
+    <script src="https://cdn.jsdelivr.net/jquery.form/4.2.1/jquery.form.min.js " integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer " crossorigin="anonymous "></script>
+    <script src="../js/framework7.min.js "></script>
+    <script src="../js/app.js "></script>
+    <script src="../js/awardRotate.js "></script>
+    <script src="../js/dazhuanpan.js "></script>
+    <!-- //下面这个script仅仅在发起人自己砍价的时候才有，其他情况没有，所以条件判断一下-->
+    <!-- <script>
+        //刚进活动页面
+        myApp.modal({
+            afterText: $("#tempalte1").html(),
+        });
+    </script> -->
+</body>
+
+</html>
