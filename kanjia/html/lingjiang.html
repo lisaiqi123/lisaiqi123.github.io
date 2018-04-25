@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/common/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/common/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/common/common-new.css">
+    <link rel="stylesheet" href="../css/common/flex.css">
+    <link rel="stylesheet" href="../css/dazhuanpan.css">
+    <script>
+        var Width = window.innerWidth;
+        if (Width > 720) {
+            document.documentElement.style.fontSize = 192 + 'px';
+        } else {
+            document.documentElement.style.fontSize = ((Width / 375) * 100) + 'px';
+        }
+        window.onresize = function() {
+            var changeWidth = window.innerWidth;
+            if (changeWidth > 720) {
+                document.documentElement.style.fontSize = 192 + 'px';
+            } else {
+                document.documentElement.style.fontSize = ((changeWidth / 375) * 100) + 'px';
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Views -->
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages">
+                <div data-page="index" class="page personal-center">
+                    <div class="page-content white">
+                        <div class="page-div fl-column-centerTop">
+                            <p>一等奖</p>
+                            <span class="award-pic fl-row-center"><img src="../images/pic-phone.png" alt=""></span>
+                            <p class="award-title">Apple iPhone X 256GB 深空灰 移动联通 电信4G手机</p>
+                            <p class="rightNow">兑换</p>
+                        </div>
+                        <div class="h3-title">
+                            <h3>活动奖品</h3>
+                            <div class="model-second">
+                                <p class="fl-row-leftStart"><span>兑换期限</span><span>2018.4.15 至 2018.4.17</span></p>
+                                <p class="fl-row-leftStart"><span>操作提示</span><span>请前往门店兑换奖品</span></p>
+                                <p class="fl-row-leftStart"><span>奖品说明</span><span>送您华为手机一部</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 非微信打开 -->
+    <script type="text/template" id="hx">
+        <div class="model-div">
+            <p class="model-now">请联系核销员扫码核销</p>
+            <p class="model-p2"><img src="../images/saas.png" /></p>
+            <p class="model-p3">123456789</p>
+            <p class="model-p4">凭券联系现场人员兑换奖品</p>
+        </div>
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.form/4.2.1/jquery.form.min.js " integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer " crossorigin="anonymous "></script>
+    <script src="../js/framework7.min.js "></script>
+    <script>
+        var myApp = new Framework7({
+            animateNavBackIcon: true, // 动态导航栏中back-link图标iOS风格化
+            modalTitle: "提示", // 弹出层默认标题
+            modalButtonOk: "确定", // 弹出层默认确定按钮
+            modalButtonCancel: "取消", // 弹出层默认取消按钮
+            modalCloseByOutside: true // 点击modal外部关闭弹出层
+        });
+        var $$ = Dom7;
+        $$('.rightNow').on('click', function() {
+            myApp.modal({
+                title: '',
+                text: $("#hx").html(),
+                buttons: []
+            })
+            $(".modal.modal-in, .modal.modal-out").css({
+                "margin-left": "-1.57rem"
+            });
+        })
+    </script>
+</body>
+
+</html>
