@@ -41,7 +41,6 @@ $(".infinite-scroll").off("scroll").on("scroll", function(e) {
 });
 //付款倒计时
 if ($("#time").length != 0) {
-    console.log($("#time").length)
     checktime();
 }
 
@@ -84,7 +83,9 @@ $$('.alert-guize').on('click', function() {
         text: $("#guize").val(),
         buttons: [{
             text: '确定',
-            close: true,
+            onClick: function() {
+                window.location.reload();
+            }
         }]
     })
 });

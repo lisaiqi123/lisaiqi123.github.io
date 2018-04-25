@@ -156,7 +156,7 @@
     height: 0.29rem;
     line-height: 27px;
     box-sizing: border-box;
-    background: #f6f6f6;
+    background: #fff9f4;
     font-size: 15px;
 }
 
@@ -353,7 +353,7 @@
 
 .modal.modal-in,
 .modal.modal-out {
-    margin-left: -158px;
+    margin-left: -1.58rem;
     border-radius: 4px;
 }
 
