@@ -13,9 +13,9 @@ var turnplate = {
     //大转盘奖品区块对应背景颜色
     outsideRadius: 174,
     //大转盘外圆的半径
-    textRadius: 130,
+    textRadius: 120,
     //大转盘奖品位置距离圆心的距离
-    insideRadius: 32,
+    insideRadius: 12,
     //大转盘内圆的半径
     startAngle: 0,
     //开始角度
@@ -27,20 +27,11 @@ $(document).ready(function() {
     //动态添加大转盘的奖品与奖品区域背景颜色
     // turnplate.restaraunts = ["谢谢参与", "一等奖", "二等奖", "三等奖", "谢谢参与", "四等奖", "五等奖", "六等奖"];
     // turnplate.colors = ["transparent", "transparent", "transparent", "transparent", "transparent", "transparent", "transparent", "transparent"];
-    turnplate.restaraunts = ["谢谢参与", "一等奖", "谢谢参与", "二等奖", "谢谢参与", "二等奖"];
+    turnplate.restaraunts = ["谢谢参与", "一等奖", "二等奖", "三等奖", "四等奖", "五等奖"];
     turnplate.colors = ["transparent", "transparent", "transparent", "transparent", "transparent", "transparent"];
     // turnplate.restaraunts = ["谢谢参与", "一等奖", "红包奖", "二等奖"];
     // turnplate.colors = ["transparent", "transparent", "transparent", "transparent"];
-    var rotateTimeOut = function() {
-        $("#wheelcanvas").rotate({
-            angle: 0,
-            animateTo: 2160,
-            duration: 12e3,
-            callback: function() {
-                alert("网络超时，请检查您的网络设置！");
-            }
-        });
-    };
+
     //旋转转盘 item:奖品位置; txt：提示语;
     var rotateFn = function(item, txt) {
         var angles = item * (360 / turnplate.restaraunts.length) - 360 / (turnplate.restaraunts.length * 2);
@@ -53,7 +44,7 @@ $(document).ready(function() {
         $("#wheelcanvas").rotate({
             angle: 0,
             animateTo: angles + 1800,
-            duration: 8e3,
+            duration: 6000,
             callback: function() {
                 if (txt.indexOf("谢谢参与") != -1) {
                     myApp.modal({
@@ -69,27 +60,99 @@ $(document).ready(function() {
                     $(".modal.modal-in, .modal.modal-out").css({ "margin-left": "-1.58rem" });
                 } else {
                     myApp.modal({
-                        title: '恭喜您，获得<span>' + txt + '</span>',
+                        title: '恭喜您，获得<span>' + txt + '</span>！',
                         text: $("#award-con").html(),
-                        buttons: [{
-                            text: '确定',
-                            onClick: function() {
-                                var options = {
-                                    // Callback gets called when toast is hidden
-                                    onHide: function() {},
-                                    duration: 9000
-                                };
-                                var toast = myApp.toast('领取成功', options);
-                                toast.show();
-                            }
-                        }]
+                        buttons: []
                     });
                     $(".modal.modal-in, .modal.modal-out").css({ "margin-left": "-1.72rem" });
+                    $(document).on("click", ".lingqu", function() {
+                        myApp.closeModal()
+                        var options = {
+                            onHide: function() {},
+                            duration: 9000
+                        };
+                        var toast = myApp.toast('领取成功', options);
+                        toast.show();
+                    });
+                    //获取要验证的元素
+                    var el = $('.model-div .censor');
+                    el.keyup(function(event) {
+                        var th = $(this);
+                        var name = $(this).attr('name');
+                        var tt = censor(th, name)
+                        if (tt[0] == false) {
+                            remind(th, tt[1], name)
+                        } else {
+                            itemSuccess(th, name)
+                        }
+                    });
+                    el.focus(function(event) {
+                        var th = $(this);
+                        th.removeClass("redborder");
+                        th.next().hide();
+                    })
                 }
                 turnplate.bRotate = !turnplate.bRotate;
             }
         });
     };
+
+    //验证方法
+    var censor = function(e, na) {
+        var val = e.val();
+        var length = val.length;
+        switch (na) {
+            case 'name':
+                if (length == 0) {
+                    return [false, '请填写称呼']
+                } else if (length > 8) {
+                    return [false, '称呼最大输入字符为8']
+                } else {
+                    return [true]
+                };
+                break;
+            case 'phoneNum':
+                if (length == 0) {
+                    return [false, '验证失败，请填写手机号码']
+                } else if (!(/^1(3|4|5|6|7|8)\d{9}$/.test(val))) {
+                    return [false, '验证失败.请填写正确手机号格式']
+                } else {
+                    return [true]
+                };
+                break;
+            case 'verify-code':
+                if (length == 0) {
+                    return [false, '输入验证码']
+                } else if (!(/^\d{6}$/.test(val))) {
+                    return [false, '输入验证码']
+                } else {
+                    return [true]
+                };
+                break;
+        }
+    };
+    //显示错误信息
+    var remind = function(e, message, name) {
+        e.next().show().text(message);
+        e.addClass("redborder");
+        if (name === "phoneNum") {
+            $("#require-code").removeClass("require-click").addClass("require-code");
+            $(".verify-code").val("");
+        }
+    };
+    //单条验证通过的方法
+    var itemSuccess = function(th, name) {
+        th.next().hide();
+        th.removeClass("redborder").addClass("passed");
+        if (name === "phoneNum") {
+            $("#require-code").removeClass("require-code").addClass("require-click");
+        }
+        if (name === "verify-code") {
+            $(".ling").removeClass("gray").addClass("lingqu");
+            $(".ling").removeAttr("disabled");
+        }
+    };
+
     //获取抽奖机会
     var nums = $("#awardNum").text();
     $(".pointer").click(function() {
@@ -104,7 +167,7 @@ $(document).ready(function() {
             $("#awardNum").text(nums);
             if (nums >= 0) {
                 turnplate.bRotate = !turnplate.bRotate;
-                var item = 1; //获取奖品停的位置
+                var item = 4; //获取奖品停的位置
                 rotateFn(item, turnplate.restaraunts[item - 1]);
             } else {
                 $("#awardNum").text(0);
@@ -215,7 +278,7 @@ function drawRouletteWheel() {
             } else {
                 //在画布上绘制填色的文本。文本的默认颜色是黑色
                 //measureText()方法返回包含一个对象，该对象包含以像素计的指定字体宽度
-                ctx.fillText(text, -ctx.measureText(text).width / 2, 20);
+                ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
             }
             //把当前画布返回（调整）到上一个save()状态之前 
             ctx.restore();
@@ -251,83 +314,25 @@ $(document).ready(function() {
         $('.share-masked').hide();
         $('html,body').removeClass('ovfHiden'); //使网页恢复可滚动
     });
-    //获取要验证的元素
-    var th = $('.model-div .censor');
-    th.blur(function(event) {
-        var th = $(this);
-        var name = $(this).attr('name');
-        var tt = censor(th, name)
-        if (tt[0] == false) {
-            remind(th, tt[1])
-        } else {
-            itemSuccess(th)
-        }
-    });
-    th.focus(function(event) {
-        var th = $(this);
-        th.removeClass("redborder");
-        th.next().hide();
-    })
-});
-//验证方法
-var censor = function(e, na) {
-    var val = e.val();
-    var length = val.length;
-    switch (na) {
-        case 'name':
-            if (length == 0) {
-                return [false, '请填写称呼']
-            } else if (length > 8) {
-                return [false, '申请未成功提示，称呼最大输入字符为8 请从新输入']
-            } else {
-                return [true]
-            };
-            break;
-        case 'phoneNum':
-            if (length == 0) {
-                console.log('ok')
-                return [false, '验证失败，请填写手机号码']
-            } else if (!(/^1(3|4|5|6|7|8)\d{9}$/.test(val))) {
-                return [false, '验证失败.请填写正确手机号格式']
-            } else {
-                return [true]
-            };
-            break;
-        case 'verify-code':
-            if (length == 0) {
-                return [false, '输入验证码']
-            } else {
-                return [true]
-            };
-            break;
-    }
-};
-//显示错误信息
-var remind = function(e, message) {
-    e.next().show().text(message);
-    e.addClass("redborder");
-};
-//单条验证通过的方法
-var itemSuccess = function(th) {
-    th.next().hide();
-    th.removeClass("redborder").addClass("passed");
-    var errorLength = 0;
-};
-myApp.modal({
-    title: '恭喜您，获得<span>' + 123 + '</span>',
-    text: $("#award-con").html(),
-    buttons: [{
-        text: '确定',
-        onClick: function() {
+    //获取验证码
+    $(document).on("click", ".require-click", function() {
+        var _self = $(this)
+        $(".verify-code").focus();
+        var time = 60;
 
-            var options = {
-                // Callback gets called when toast is hidden
-                onHide: function() {},
-                duration: 9000
-            };
-            var toast = myApp.toast('领取成功', options);
-            toast.show();
-        }
-    }]
+        setTime = setInterval(function() {
+            if (time <= 0) {
+                _self.text("重新获取");
+                clearInterval(setTime);
+                return;
+            }
+            time--;
+            _self.text(time);
+        }, 1000);
+        var url = "";
+        // $.get(url, function(data) {
+
+        // })
+    });
+
 });
-$(".modal.modal-in, .modal.modal-out").css({ "margin-left": "-1.72rem" });

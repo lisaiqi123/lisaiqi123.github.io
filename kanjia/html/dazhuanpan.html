@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../css/common/framework7.ios.min.css">
     <link rel="stylesheet" href="../css/common/framework7.ios.colors.min.css">
     <link rel="stylesheet" href="../css/common/common-new.css">
-    <link rel="stylesheet" href="../css/common/flex.css">
     <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" href="../css/common/flex.css">
     <link rel="stylesheet" href="../css/dazhuanpan.css">
     <script>
         var Width = window.innerWidth;
@@ -61,7 +61,7 @@
                             <!--状态一：：： data-status="0"为分享后 -->
                             <!-- <p>您今天还有 <span id="awardNum" data-status="0">1</span> 次抽奖机会</p> -->
                             <!--状态二：：： data-status="1"为正常 -->
-                            <p>您今天还有 <span id="awardNum" data-status="0">2</span> 次抽奖机会</p>
+                            <p>您今天还有 <span id="awardNum" data-status="1">2</span> 次抽奖机会</p>
 
                         </div>
                         <div class="fl-row-justy template3">
@@ -70,7 +70,7 @@
                         </div>
                         <!-- 广告图 -->
                         <div class="template4 fl-row-leftStartNowrap">
-                            <img src="../images/pic-activity.png" alt="">
+                            <a href="javascript:;"><img src="../images/pic-activity.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -80,59 +80,68 @@
     <div class="share-masked" hidden></div>
     <script type="text/template" id="discription">
         <div class="model-share">
-            <h3>活动奖品</h3>
-            <div class="model-second">
-                <p class="fl-row-leftStart"><span>一等奖</span><span>iPhoneX</span></p>
-                <p class="fl-row-leftStart"><span>二等奖</span><span>榨汁机</span></p>
-                <p class="fl-row-leftStart"><span>三等奖</span><span>电饭锅</span></p>
-            </div>
-            <h3>活动时间</h3>
-            <div class="model-second">
-                <p class="fl-row-leftStart">2018年4月15日 10:00 - 2018年4月17日 10:00</p>
-            </div>
-            <h3>活动说明</h3>
-            <div class="model-second">
-                <p>1.邀请好友一起砍价，24小时内看到最低价就可以以此价格下单</p>
-                <p>2.阿斯顿空间放卡罗傻到家啊塑料袋快放假阿是快递费见</p>
-                <p>3.啥地方少点啦看风景阿卢卡斯的减肥</p>
-                <p>4.阿斯顿法师打发士大夫阿斯顿发送到</p>
-                <p>5.阿里速度快及法律啥款到即发啊阿斯顿快放假是否</p>
-                <p>6.阿斯顿发斯蒂芬</p>
-                <p>7.完成下单即可完成所有操作</p>
+            <div class="model-con">
+                <div class="model-con-inner">
+                    <h3>活动奖品</h3>
+                    <div class="model-second">
+                        <p class="fl-row-leftStart"><span>一等奖</span><span>iPhoneX</span></p>
+                        <p class="fl-row-leftStart"><span>二等奖</span><span>榨汁机</span></p>
+                        <p class="fl-row-leftStart"><span>三等奖</span><span>电饭锅</span></p>
+                    </div>
+                    <h3>活动时间</h3>
+                    <div class="model-second">
+                        <p class="fl-row-leftStart">2018年4月15日 10:00 - 2018年4月17日 10:00</p>
+                    </div>
+                    <h3>活动说明</h3>
+                    <div class="model-second">
+                        <p>1.邀请好友一起砍价，24小时内看到最低价就可以以此价格下单</p>
+                        <p>2.阿斯顿空间放卡罗傻到家啊塑料袋快放假阿是快递费见</p>
+                        <p>3.啥地方少点啦看风景阿卢卡斯的减肥</p>
+                        <p>4.阿斯顿法师打发士大夫阿斯顿发送到</p>
+                        <p>5.阿里速度快及法律啥款到即发啊阿斯顿快放假是否</p>
+                        <p>6.阿斯顿发斯蒂芬</p>
+                        <p>7.完成下单即可完成所有操作</p>
+                    </div>
+                </div>
             </div>
         </div>
     </script>
     <!-- 活动说明 -->
     <script type="text/template" id="myAward">
         <div class="model-share">
-            <!-- 没有抽奖记录 -->
-            <div class="model-no">
-                抱歉，暂无抽中奖品
-            </div>
-            <!-- 有抽奖记录 -->
-            <div class="model-item">
-                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                <p class="model-item3 fl-row-left">未领取</p>
-                <a class="external" href="javascript:;">兑换</a>
-            </div>
-            <div class="model-item">
-                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                <p class="model-item3 fl-row-left">未领取</p>
-                <a class="external gray" href="javascript:;">兑换</a>
-            </div>
-            <div class="model-item">
-                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                <p class="model-item3 fl-row-left">未领取</p>
-                <a class="external gray" href="javascript:;">兑换</a>
-            </div>
-            <div class="model-item">
-                <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                <p class="model-item3 fl-row-left">未领取</p>
-                <a class="external" href="javascript:;">兑换</a>
+            <div class="model-con">
+                <div class="model-con-inner">
+                    <!-- 没有抽奖记录 -->
+                    <div class="model-no">
+                        抱歉，暂无抽中奖品
+                    </div>
+                    <!-- 有抽奖记录 -->
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                        <p class="model-item3 fl-row-left">未领取</p>
+                        <a class="external" href="javascript:;">兑换</a>
+                    </div>
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                        <p class="model-item3 gray fl-row-left">已领取</p>
+                        <a class="external gray" href="javascript:;">兑换</a>
+                    </div>
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                        <p class="model-item3 gray fl-row-left">已领取</p>
+                        <a class="external gray" href="javascript:;">兑换</a>
+                    </div>
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
+                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
+                        <p class="model-item3 fl-row-left">未领取</p>
+                        <a class="external" href="javascript:;">兑换</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </script>
@@ -143,19 +152,27 @@
             <p class="award-title">Apple iPhone X 256GB 深空灰 移动联通 电信4G手机</p>
             <p class="award-intro">完善下方信息，立即领取奖品</p>
             <p class="award-input"><input type="text" placeholder="请填写姓名" class="censor" name="name" />
-                <a>完善下方信息，</a>
+                <a></a>
             </p>
             <p class="award-input"><input type="tel" placeholder="请填写手机号" class="censor" name="phoneNum" />
-                <a>完善下方信息，</a>
+                <a></a>
             </p>
             <div class="award-input fl-row-justy">
                 <p class="relative">
-                    <input type="tel" class="verify-code censor" name="verify-code">
+                    <input type="tel" placeholder="验证码" class="verify-code censor" name="verify-code">
                     <a></a>
                 </p>
-                <span>获取验证码</span>
+                <span id="require-code" class="require-code">获取验证码</span>
             </div>
         </div>
+        <!-- 状态1  获取奖品为除了优惠券 的button按钮 -->
+        <div class="button1">
+            <span class="button2"><a href="javascript:;" class="ling gray" disabled>领取</a></span>
+        </div>
+        <!-- 状态2  获取奖品为优惠券 的button按钮 -->
+        <!-- <div class="button1">
+            <span class="button2"><a href="javascript:;" class="lingqu">领取</a></span>
+        </div> -->
     </script>
     <!-- 未中奖还有抽奖次数 -->
     <script type="text/template" id="noawardNum">
@@ -209,7 +226,7 @@
         //     buttons: []
         // })
         // $(".modal.modal-in, .modal.modal-out").css({
-        //     "margin-left": "-157px"
+        //     "margin-left": "-1.57rem"
         // });
     </script>
 </body>

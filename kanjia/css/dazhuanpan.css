@@ -12,8 +12,11 @@
 
 .modal-button:first-child:last-child {
     border-radius: 0 0 4px 4px;
-    background: #e54343;
+    background: #ff5a44;
     color: #fff;
+    height: .5rem;
+    line-height: .5rem;
+    padding: 0;
 }
 
 .modal-button:first-child {
@@ -26,7 +29,7 @@
 
 .modal-inner .modal-title {
     padding: 0;
-    padding: .15rem 0;
+    padding: .35rem 0 .15rem 0;
     background: #fff;
 }
 
@@ -37,13 +40,12 @@
     line-height: 1.6;
     width: 3.45rem;
     background: #fff;
-    padding: 0 .15rem .15rem;
     margin-top: 0;
 }
 
 .model-saas {
     text-align: center;
-    width: 3.16rem;
+    width: 2.86rem;
     padding-top: .4rem;
     background: #fff;
     margin-bottom: .1rem;
@@ -57,24 +59,25 @@
 
 .model-p2 {
     text-align: center;
-    width: 3.16rem;
+    width: 2.86rem;
     background: #fff;
     margin-top: .15rem;
 }
 
 .model-p3 {
     text-align: center;
-    width: 3.16rem;
+    width: 2.86rem;
     font-size: .24rem;
     color: #ff5a44;
     background: #fff;
     margin-top: .15rem;
     margin-bottom: .15rem;
+    font-weight: bold;
 }
 
 .model-p4 {
     text-align: center;
-    width: 3.16rem;
+    width: 2.86rem;
     font-size: .12rem;
     color: #333;
     background: #fff;
@@ -86,7 +89,7 @@
     font-size: .18rem;
     color: #333;
     line-height: 1.6;
-    width: 3.16rem;
+    width: 2.86rem;
     padding-top: .4rem;
     background: #fff;
     font-weight: bold;
@@ -103,7 +106,7 @@
     font-size: .18rem;
     color: #333;
     line-height: 1.6;
-    width: 3.16rem;
+    width: 2.86rem;
     background: #fff;
     font-weight: bold;
     margin-bottom: .1rem;
@@ -114,7 +117,7 @@
     font-size: .18rem;
     color: #333;
     line-height: 1.6;
-    width: 3.16rem;
+    width: 2.86rem;
     padding-bottom: .4rem;
     background: #fff;
     font-weight: bold;
@@ -129,7 +132,7 @@
     font-size: .12rem;
     color: #ff5a44;
     line-height: 1.6;
-    width: 3.16rem;
+    width: 2.86rem;
     padding-bottom: .4rem;
     background: #fff;
     font-weight: normal;
@@ -140,7 +143,7 @@
     font-size: .14rem;
     color: #333;
     line-height: 1.6;
-    width: 3.16rem;
+    width: 2.86rem;
     padding-bottom: .4rem;
     background: #fff;
     font-weight: normal;
@@ -174,6 +177,7 @@
 
 .model-div {
     background: #fff;
+    padding: 0 .15rem .15rem;
 }
 
 .modal-overlay {
@@ -259,7 +263,7 @@
     text-align: center;
     width: 1.6rem;
     height: .5rem;
-    line-height: 50px;
+    line-height: .5rem;
     border-radius: 5px;
     background-color: #ff5a44;
     margin-top: .35rem;
@@ -274,29 +278,42 @@
     margin-top: .35rem;
 }
 
-.template4 img {
+.template4 a,
+.template4 a img {
     width: 100%;
     display: block;
 }
 
 .model-share {
     width: 3.45rem;
-    padding: .15rem .15rem 0;
+    padding: .15rem 0;
     background: #fff;
     max-height: 3.55rem;
-    overflow-y: auto;
 }
 
 .model-share h3 {
     width: 1.02rem;
-    height: .29rem;
-    line-height: 29px;
+    height: .3rem;
+    line-height: .3rem;
     background: url("../images/pic-guize.png") 0 0 no-repeat;
     background-size: 100% 100%;
     color: #fff;
     font-size: .15rem;
     margin-top: .1rem;
     margin-bottom: .14rem;
+    font-weight: normal;
+}
+
+.model-con {
+    width: 100%;
+    max-height: 3.25rem;
+    padding: 0 .15rem;
+    overflow-y: auto;
+}
+
+.model-con-inner {
+    width: 100%;
+    height: 100%;
 }
 
 .model-second {
@@ -336,7 +353,7 @@
     position: absolute;
     width: .6rem;
     height: .3rem;
-    line-height: 30px;
+    line-height: .3rem;
     text-align: center;
     border-radius: .15rem;
     background-color: #631dd8;
@@ -363,7 +380,7 @@
 
 .model-item1 span:last-child {
     font-size: .15rem;
-    color: #333;
+    color: #ff5a44;
 }
 
 .model-item2 {
@@ -376,6 +393,10 @@
     margin-bottom: .12rem;
     font-size: .12rem;
     color: #ff5a44;
+}
+
+.model-item3.gray {
+    color: #999;
 }
 
 .model-no {
@@ -429,7 +450,7 @@
 
 .award-input input {
     width: 100%;
-    height: .45rem;
+    height: .46rem;
     border-radius: 3px;
     background-color: #ffffff;
     border: solid 1px #cccccc;
@@ -447,13 +468,17 @@
 .award-input span {
     display: inline-block;
     width: 1.1rem;
-    height: .45rem;
-    line-height: 45px;
+    height: .46rem;
+    line-height: .46rem;
     border-radius: 3px;
     background: #ff5a44;
     font-size: .16rem;
     color: #fff;
     text-align: center;
+}
+
+.award-input span.require-code {
+    background: #ccc;
 }
 
 .relative {
@@ -488,6 +513,14 @@
 .show-share {
     display: inline-block;
     width: 100%;
+    color: #fff;
+}
+
+.show-share.gray {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    background: #ccc;
 }
 
 .ovfHiden {
@@ -533,10 +566,9 @@
     background-color: #631dd8;
     font-size: .16rem;
     font-weight: 500;
-    line-height: 1.5;
     color: #ffffff;
     text-align: center;
-    line-height: 40px;
+    line-height: .4rem;
 }
 
 .h3-title {
@@ -549,4 +581,31 @@
     line-height: 1.6;
     color: #333333;
     margin-bottom: .1rem;
+}
+
+.button2 {
+    display: inline-block;
+    border-radius: 0 0 4px 4px;
+    color: #fff;
+    height: .5rem;
+    line-height: .5rem;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.ling,
+.lingqu {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    background: #ff5a44;
+    height: 100%;
+}
+
+.ling.gray {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    background: #aaa;
 }
