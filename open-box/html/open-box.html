@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_299283_s3hqznbnrr6vquxr.css">
+    <link rel="stylesheet" href="../css/common/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/common/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../css/common/common-new.css">
+    <link rel="stylesheet" href="../css/common/flex.css">
+    <link rel="stylesheet" href="../css/common/toast.css">
+    <link rel="stylesheet" href="../css/open-box.css">
+    <script>
+        var Width = window.innerWidth;
+        if (Width > 720) {
+            document.documentElement.style.fontSize = 192 + 'px';
+        } else {
+            document.documentElement.style.fontSize = ((Width / 375) * 100) + 'px';
+        }
+        window.onresize = function() {
+            var changeWidth = window.innerWidth;
+            if (changeWidth > 720) {
+                document.documentElement.style.fontSize = 192 + 'px';
+            } else {
+                document.documentElement.style.fontSize = ((changeWidth / 375) * 100) + 'px';
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Views -->
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages">
+                <div data-page="index" class="page personal-center">
+                    <div class="page-content infinite-scroll">
+                        <div class="box-bgcolor">
+                            <div class="myAward fl-row-center">
+                                <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-gift__easyico"></use>
+                                </svg>
+                            </span>
+                                <span>我的奖品</span>
+                            </div>
+                            <!-- 1.1我首次打开拆礼盒页面 -->
+                            <!-- <div class="box1">
+                                <div class="lingqu"></div>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 1.1我已经点击立即领取 -->
+                            <!-- <div class="box2">
+                                <div class="box-info fl-column-center">
+                                    <p>领取成功</p>
+                                    <p>快邀请 <span>23</span> 位好友帮您拆礼盒</p>
+                                    <p id="time" data-time="80">活动还剩 <span>23</span> : <span>23</span> : <span>59</span> 结束，赶快分享吧！</p>
+                                </div>
+                                <div class="share"></div>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 3 我点开我的礼盒页面，未拆成功 -->
+                            <!-- <div class="box2">
+                                <div class="box-info fl-column-center">
+                                    <p>已有1位好友的帮忙</p>
+                                    <p>还差 <span>23</span> 位好友的帮忙</p>
+                                    <p id="time" data-time="80">活动还剩 <span>23</span> : <span>23</span> : <span>59</span> 结束，赶快分享吧！</p>
+                                </div>
+                                <div class="find_help"></div>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 4.1我已经成功拆开 -->
+                            <!-- 0 实物奖品 1 优惠券 -->
+                            <div class="box2">
+                                <div class="box-info fl-column-center two_btn_info">
+                                    <p>成功拆开</p>
+                                    <p>经过 <span>23</span> 位好友的帮忙</p>
+                                </div>
+                                <div class="chaikai" data-type="1"></div>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div>
+                            <!-- 4.2我点开自己的礼盒页面，成功的拆开 -->
+                            <!-- <div class="box4">
+                                <div class="box-info fl-column-center two_btn_info">
+                                    <p>成功拆开</p>
+                                    <p>经过 <span>23</span> 位好友的帮忙</p>
+                                </div>
+                                <div class="look_award"></div>
+                                <a href="javascript:;" class="jixu_faqi_blue"></a>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 5拆礼盒失败 -->
+                            <!-- <div class="box5">
+                                <div class="box-info fl-column-center jixu_faqi_info">
+                                    <p>很遗憾，拆礼盒失败</p>
+                                </div>
+                                <a href="javascript:;" class="jixu_faqi_red"></a>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 6.1我点开别人的发的未成功的 -->
+                            <!-- <div class="box6">
+                                <div class="whos_box"><span>咩咩咩</span>的礼盒</div>
+                                <div class="box-info fl-column-center">
+                                    <p>已有1位好友的帮忙</p>
+                                    <p>还差 <span>23</span> 位好友的帮忙</p>
+                                    <p id="time" data-time="80">活动还剩 <span>23</span> : <span>23</span> : <span>59</span> 结束，赶快分享吧！</p>
+                                </div>
+                                <div class="help_her"></div>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 7我点开别人的发的未成功的，帮拆后的 -->
+                            <!-- <div class="box7">
+                                <div class="whos_box"><span>咩咩咩</span>的礼盒</div>
+                                <div class="box-info fl-column-center">
+                                    <p>已有1位好友帮过了</p>
+                                    <p>还差 <span>23</span> 位好友的帮忙</p>
+                                    <p id="time" data-time="80">活动还剩 <span>23</span> : <span>23</span> : <span>59</span> 结束，赶快分享吧！</p>
+                                </div>
+                                <a href="javascript:;" class="me_join external"></a>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 8我点开别人发的成功的 -->
+                            <!-- <div class="box8">
+                                <div class="whos_box"><span>咩咩咩</span>的礼盒</div>
+                                <div class="box-info fl-column-center me_join_info">
+                                    <p>好友已成功拆开礼盒<br/>并获得优厚的奖品</p>
+                                </div>
+                                <a href="javascript:;" class="me_join external"></a>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 9我点开别人发的失败的 -->
+                            <!-- <div class="box9">
+                                <div class="whos_box"><span>咩咩咩</span>的礼盒</div>
+                                <div class="box-info fl-column-center me_join_info2">
+                                    <p>很遗憾，拆礼盒失败</p>
+                                </div>
+                                <a href="javascript:;" class="me_join external"></a>
+                                <div class="notice fl-row-center">
+                                    <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-laba"></use>
+                                </svg>
+                                    <span>已有20人参与领取礼盒</span>
+                                </div>
+                                <div class="lan-ze fl-row-center">
+                                    <span class="awrad-list"><i class="icon icon-liwuhuodong"></i>奖品一览</span>
+                                    <span class="alert-guize"><i class="icon icon-wentiquestions1"></i>活动规则</span>
+                                </div>
+                            </div> -->
+                            <!-- 帮拆好友榜 -->
+                            <div class="help-box">
+                                <p><img src="../images/help-bang.png" alt=""></p>
+                                <ul class="help-list">
+                                    <li class="fl-row-justy">
+                                        <span>
+                                            <img src="../images/open-head.png" alt="">
+                                            <span>库尔沟</span>
+                                        </span>
+                                        <span>04.21 12:32:23</span>
+                                    </li>
+                                    <li class="fl-row-justy"><span><img src="../images/open-head.png" alt=""><span>库尔沟</span></span><span>04.21 12:32:23</span></li>
+                                    <li class="fl-row-justy"><span><img src="../images/open-head.png" alt=""><span>库尔沟</span></span><span>04.21 12:32:23</span></li>
+                                    <li class="fl-row-justy"><span><img src="../images/open-head.png" alt=""><span>库尔沟</span></span><span>04.21 12:32:23</span></li>
+                                    <li class="fl-row-justy"><span><img src="../images/open-head.png" alt=""><span>库尔沟</span></span><span>04.21 12:32:23</span></li>
+                                    <li class="fl-row-justy"><span><img src="../images/open-head.png" alt=""><span>库尔沟</span></span><span>04.21 12:32:23</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分享蒙版 -->
+    <script type="text/template" id="template0">
+        <div class="share-ovHidden">
+            <img src="../images/share-ov.png" alt="">
+        </div>
+    </script>
+    <!-- 活动规则内容 -->
+    <input type="hidden" id="guize" value="1、钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰<br/>2、发顺丰顺丰">
+    <!-- 我的奖品内容 -->
+    <script type="text/template" id="template1">
+        <div class="model-share">
+            <div class="model-con">
+                <div class="model-con-inner">
+                    <!-- 没有抽奖记录 -->
+                    <div class="model-no">
+                        抱歉，暂无奖品
+                    </div>
+                    <!-- 有抽奖记录 -->
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖</span><span>实物奖品</span></p>
+                        <p class="model-item2">Apple iPhone X 256GB 深空灰 移Apple iPhone X 256GB 深空灰 移</p>
+                        <p class="model-item3 gray fl-row-left">兑换码<span>F8S9X9D</span></p>
+                    </div>
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖</span><span>折扣券</span></p>
+                        <p class="model-item2">满1000元减100元</p>
+                        <a class="external" href="javascript:;">兑换</a>
+                    </div>
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖</span><span>折扣券</span></p>
+                        <p class="model-item2">满1000元减100元</p>
+                    </div>
+                    <div class="model-item">
+                        <p class="model-item1 fl-row-left"><span>一等奖</span><span>折扣券</span></p>
+                        <p class="model-item2">满1000元减100元</p>
+                        <a class="external" href="javascript:;">兑换</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 奖品一览内容 -->
+    <script type="text/template" id="template2">
+        <div class="model-con">
+            <div class="model-con-inner">
+                <ul class='award-list'>
+                    <li><span>一等奖</span><span>Iphone X</span></li>
+                    <li><span>二等奖</span><span>满100减10的优惠券</span></li>
+                    <li><span>三等奖</span><span>满100减5的优惠券</span></li>
+                    <li><span>四等奖</span><span>指甲刀一个</span></li>
+                    <li><span>五等奖</span><span>Iphone</span></li>
+                    <li><span>六等奖</span><span>满100减10的优惠券</span></li>
+                    <li><span>七等奖</span><span>满100减5的优惠券</span></li>
+                    <li><span>八等奖</span><span>指甲刀一个</span></li>
+                </ul>
+            </div>
+        </div>
+    </script>
+    <!-- 立即领取实物奖品 -->
+    <script type="text/template" id="template3">
+        <div class="model-con">
+            <div class="model-con-inner">
+                <i class="icon icon-saasguanbi close-btn"></i>
+                <div class="cycle">恭喜您，获得<span>一等奖</span>！</div>
+                <div class="model-div fl-column-centerTop">
+                    <span class="award-pic"><img src="../images/open-bg.png" alt=""></span>
+                    <p class="award-title">满100减5的优惠券</p>
+                </div>
+                <div class="fl-column-center duihuan">
+                    <span>兑换码</span>
+                    <span>F8S9X9D</span>
+                    <span>截图保存该页面到指定门店兑换奖励</span>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 立即领取优惠券 -->
+    <script type="text/template" id="template4">
+        <div class="model-con">
+            <div class="model-con-inner fl-column-center">
+                <div class="cycle">恭喜您，获得<span>六等奖</span>！</div>
+                <div class="coupon-bg">满100减5的优惠券</div>
+                <div class="use-time">
+                    <span>门店券</span>
+                    <span>截止使用时间：</span>
+                    <span>2018.05.01</span>
+                </div>
+                <button class="ling-btn">领取</button>
+            </div>
+        </div>
+    </script>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://at.alicdn.com/t/font_299283_s3hqznbnrr6vquxr.js"></script>
+<script src="http://captcha.luosimao.com/static/js/api.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/jquery.form/4.2.1/jquery.form.min.js " integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer " crossorigin="anonymous "></script> -->
+<script src="../js/framework7.min.js "></script>
+<script src="../js/framework7.upscroller.js "></script>
+<script src="../js/toast.js "></script>
+<script src="../js/open-box.js "></script>
+
+</html>
