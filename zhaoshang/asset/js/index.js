@@ -14,127 +14,123 @@
             }
         })
     }
-    var swiperIndex = sessionStorage.getItem('swiperIndex') ? sessionStorage.getItem('swiperIndex') : 0,
-        initSwiper = {
-            direction: 'horizontal',
-            initialSlide: 0,
-            prevButton: '.swiper-button-prev',
-            nextButton: '.swiper-button-next',
-            // autoplay: 2000,
-            // 切换页面成功之前的回调
-            onSlideChangeStart: function(swiper) {
-                // sessionStorage.setItem('swiperIndex', swiper.activeIndex);
-                if (swiper.activeIndex == 0) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son1 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon1.slideTo(0);
-
-                    swiperSon1.startAutoplay();
-                    swiperSon2.stopAutoplay();
-                    swiperSon3.stopAutoplay();
-                    swiperSon4.stopAutoplay();
-                    swiperSon5.stopAutoplay();
-                    swiperSon6.stopAutoplay();
-                    swiperSon7.stopAutoplay();
-                }
-                if (swiper.activeIndex == 1) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son2 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon2.slideTo(0);
-                    swiperSon1.stopAutoplay();
-                    swiperSon2.startAutoplay();
-                    swiperSon3.stopAutoplay();
-                    swiperSon4.stopAutoplay();
-                    swiperSon5.stopAutoplay();
-                    swiperSon6.stopAutoplay();
-                    swiperSon7.stopAutoplay();
-                }
-                if (swiper.activeIndex == 2) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son3 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon3.slideTo(0);
-                    swiperSon1.stopAutoplay();
-                    swiperSon2.stopAutoplay();
-                    swiperSon3.startAutoplay();
-                    swiperSon4.stopAutoplay();
-                    swiperSon5.stopAutoplay();
-                    swiperSon6.stopAutoplay();
-                    swiperSon7.stopAutoplay();
-                }
-                if (swiper.activeIndex == 3) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son4 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon4.slideTo(0);
-                    swiperSon1.stopAutoplay();
-                    swiperSon2.stopAutoplay();
-                    swiperSon3.stopAutoplay();
-                    swiperSon4.startAutoplay();
-                    swiperSon5.stopAutoplay();
-                    swiperSon6.stopAutoplay();
-                    swiperSon7.stopAutoplay();
-                }
-                if (swiper.activeIndex == 4) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son5 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon5.slideTo(0);
-                    swiperSon1.stopAutoplay();
-                    swiperSon2.stopAutoplay();
-                    swiperSon3.stopAutoplay();
-                    swiperSon4.stopAutoplay();
-                    swiperSon5.startAutoplay();
-                    swiperSon6.stopAutoplay();
-                    swiperSon7.stopAutoplay();
-                }
-                if (swiper.activeIndex == 5) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son6 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon6.slideTo(0);
-                    swiperSon1.stopAutoplay();
-                    swiperSon2.stopAutoplay();
-                    swiperSon3.stopAutoplay();
-                    swiperSon4.stopAutoplay();
-                    swiperSon5.stopAutoplay();
-                    swiperSon6.startAutoplay();
-                    swiperSon7.stopAutoplay();
-                }
-                if (swiper.activeIndex == 6) {
-                    $(".swiper-container-son .swiper-slide").each(function() {
-                        $(this).addClass("visibility");
-                        $(".swiper-container-son7 .swiper-slide").removeClass("visibility");
-                    })
-                    step(swiper.activeIndex);
-                    swiperSon7.slideTo(0);
-                    swiperSon1.stopAutoplay();
-                    swiperSon2.stopAutoplay();
-                    swiperSon3.stopAutoplay();
-                    swiperSon4.stopAutoplay();
-                    swiperSon5.stopAutoplay();
-                    swiperSon6.stopAutoplay();
-                    swiperSon7.startAutoplay();
-                }
-            },
-            onSlideChangeEnd: function(swiper) {
-                swiperFather.update(); //swiper更新
+    var initSwiper = {
+        direction: 'horizontal',
+        initialSlide: 0,
+        prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        // 切换页面成功之前的回调
+        onSlideChangeStart: function(swiper) {
+            if (swiper.activeIndex == 0) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son1 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon1.slideTo(0);
+                swiperSon1.startAutoplay();
+                swiperSon2.stopAutoplay();
+                swiperSon3.stopAutoplay();
+                swiperSon4.stopAutoplay();
+                swiperSon5.stopAutoplay();
+                swiperSon6.stopAutoplay();
+                swiperSon7.stopAutoplay();
             }
-        };
+            if (swiper.activeIndex == 1) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son2 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon2.slideTo(0);
+                swiperSon1.stopAutoplay();
+                swiperSon2.startAutoplay();
+                swiperSon3.stopAutoplay();
+                swiperSon4.stopAutoplay();
+                swiperSon5.stopAutoplay();
+                swiperSon6.stopAutoplay();
+                swiperSon7.stopAutoplay();
+            }
+            if (swiper.activeIndex == 2) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son3 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon3.slideTo(0);
+                swiperSon1.stopAutoplay();
+                swiperSon2.stopAutoplay();
+                swiperSon3.startAutoplay();
+                swiperSon4.stopAutoplay();
+                swiperSon5.stopAutoplay();
+                swiperSon6.stopAutoplay();
+                swiperSon7.stopAutoplay();
+            }
+            if (swiper.activeIndex == 3) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son4 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon4.slideTo(0);
+                swiperSon1.stopAutoplay();
+                swiperSon2.stopAutoplay();
+                swiperSon3.stopAutoplay();
+                swiperSon4.startAutoplay();
+                swiperSon5.stopAutoplay();
+                swiperSon6.stopAutoplay();
+                swiperSon7.stopAutoplay();
+            }
+            if (swiper.activeIndex == 4) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son5 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon5.slideTo(0);
+                swiperSon1.stopAutoplay();
+                swiperSon2.stopAutoplay();
+                swiperSon3.stopAutoplay();
+                swiperSon4.stopAutoplay();
+                swiperSon5.startAutoplay();
+                swiperSon6.stopAutoplay();
+                swiperSon7.stopAutoplay();
+            }
+            if (swiper.activeIndex == 5) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son6 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon6.slideTo(0);
+                swiperSon1.stopAutoplay();
+                swiperSon2.stopAutoplay();
+                swiperSon3.stopAutoplay();
+                swiperSon4.stopAutoplay();
+                swiperSon5.stopAutoplay();
+                swiperSon6.startAutoplay();
+                swiperSon7.stopAutoplay();
+            }
+            if (swiper.activeIndex == 6) {
+                $(".swiper-container-son .swiper-slide").each(function() {
+                    $(this).addClass("visibility");
+                    $(".swiper-container-son7 .swiper-slide").removeClass("visibility");
+                })
+                step(swiper.activeIndex);
+                swiperSon7.slideTo(0);
+                swiperSon1.stopAutoplay();
+                swiperSon2.stopAutoplay();
+                swiperSon3.stopAutoplay();
+                swiperSon4.stopAutoplay();
+                swiperSon5.stopAutoplay();
+                swiperSon6.stopAutoplay();
+                swiperSon7.startAutoplay();
+            }
+        },
+        onSlideChangeEnd: function(swiper) {
+            swiperFather.update(); //swiper更新
+        }
+    };
     var swiperFather = new Swiper('.swiper-container-father', initSwiper);
     var swiperSon1 = new Swiper('.swiper-container-son1', {
         direction: 'horizontal',
@@ -300,21 +296,9 @@
         lazyLoading: true,
         autoplayDisableOnInteraction: false,
         pagination: '#bus-brand .swiper-pagination',
+        loop: true,
     });
-    // 全国入驻城市
-    $('.case-con-tab li').on('click', function() {
-        $(this).addClass('active').siblings().removeClass('active');
-        $('.case-con-show img').attr('src', $(this).data('src'));
-    });
-    // $(window).resize(function() {
-    //     setTimeout(function() {
-    //         swiper_rem.onResize();
-    //         swiper_rem2.onResize();
-    //         swiper_rem3.onResize();
-    //         swiper_rem4.onResize();
-    //         swiper_rem5.onResize();
-    //     }, 400);
-    // });
+
     //城市选择
     var region = {};
     region.getRegion = function getRegion(parent_id, ele) {
@@ -354,4 +338,6 @@
             region.getRegion(city, 'district', district);
         }
     }
+
+    //提交申请
 })()

@@ -25,24 +25,6 @@
     color: #fff;
 }
 
-@keyframes cwzs01 {
-    from {
-        top: 2.4px;
-    }
-    to {
-        top: 2.8rem;
-    }
-}
-
-@-webkit-keyframes cwzs01 {
-    from {
-        top: 2.4px;
-    }
-    to {
-        top: 2.8rem;
-    }
-}
-
 .cwzs1-2 img:nth-child(1) {
     position: absolute;
     left: 50%;
@@ -50,28 +32,6 @@
     margin-left: -1.525rem;
     width: 3.05rem;
     height: 1.82rem;
-    /* animation: cwzs01 1s;
-    -moz-animation: cwzs01 1s;
-    -webkit-animation: cwzs01 1s;
-    -o-animation: cwzs01 1s; */
-}
-
-@keyframes cwzs02 {
-    from {
-        left: 20%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
-@-webkit-keyframes cwzs02 {
-    from {
-        left: 20%;
-    }
-    to {
-        left: 50%;
-    }
 }
 
 .cwzs1-2 img:nth-child(2) {
@@ -81,27 +41,29 @@
     margin-left: -.91rem;
     width: 1.82rem;
     height: 3.34rem;
-    /* animation: cwzs02 1s;
-    -moz-animation: cwzs02 1s;
-    -webkit-animation: cwzs02 1s;
-    -o-animation: cwzs02 1s; */
 }
 
 @keyframes cwzs03 {
     0% {
         top: .7rem;
+        /* transform: translateY(.7rem);
+        -webkit-transform: translateY(.7rem); */
     }
     100% {
         top: .9rem;
+        /* transform: translateY(.9rem);
+        -webkit-transform: translateY(.9rem); */
     }
 }
 
 @-webkit-keyframes cwzs03 {
     0% {
         top: .7rem;
+        -webkit-transform: translateY(.7rem);
     }
     100% {
         top: .9rem;
+        -webkit-transform: translateY(.9rem);
     }
 }
 
@@ -118,26 +80,6 @@
     -o-animation: cwzs03 2s ease-in-out infinite alternate;
 }
 
-@keyframes cwzs04 {
-    from {
-        top: 5.2rem;
-        height: 0.3rem;
-    }
-    to {
-        top: 4.2rem;
-        height: 1.295rem;
-    }
-}
-
-@-webkit-keyframes cwzs04 {
-    from {
-        top: 6.2rem;
-    }
-    to {
-        top: 4.2rem;
-    }
-}
-
 .cwzs1-2 img:nth-child(4) {
     position: absolute;
     left: 50%;
@@ -145,10 +87,6 @@
     margin-left: -1.21rem;
     width: 2.435rem;
     height: 1.295rem;
-    /* animation: cwzs04 1s;
-    -moz-animation: cwzs04 1s;
-    -webkit-animation: cwzs04 1s;
-    -o-animation: cwzs04 1s; */
 }
 
 #cwzs2 {
@@ -190,24 +128,6 @@
     text-align: center;
 }
 
-@keyframes cwzs21 {
-    from {
-        left: 20%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
-@-webkit-keyframes cwzs21 {
-    from {
-        left: 20%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
 .cwzs2-2 img:nth-child(1) {
     position: absolute;
     left: 50%;
@@ -215,28 +135,6 @@
     margin-left: -1.82rem;
     width: 3.63rem;
     height: 2.575rem;
-    /* animation: cwzs21 1s;
-    -moz-animation: cwzs21 1s;
-    -webkit-animation: cwzs21 1s;
-    -o-animation: cwzs21 1s; */
-}
-
-@keyframes cwzs22 {
-    from {
-        left: 80%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
-@-webkit-keyframes cwzs22 {
-    from {
-        left: 80%;
-    }
-    to {
-        left: 50%;
-    }
 }
 
 .cwzs2-2 img:nth-child(2) {
@@ -246,27 +144,23 @@
     margin-left: -1.78rem;
     width: 3.56rem;
     height: 3.56rem;
-    /* animation: cwzs22 1s;
-    -moz-animation: cwzs22 1s;
-    -webkit-animation: cwzs22 1s;
-    -o-animation: cwzs22 1s; */
 }
 
 @keyframes cwzs23 {
-    from {
-        top: 0;
+    0% {
+        transform: translateY(0);
     }
-    to {
-        top: .23rem;
+    100% {
+        transform: translateY(.23rem);
     }
 }
 
 @-webkit-keyframes cwzs23 {
-    from {
-        top: 0;
+    0% {
+        transform: translateY(0);
     }
-    to {
-        top: .23rem;
+    100% {
+        transform: translateY(.23rem);
     }
 }
 
@@ -284,20 +178,20 @@
 }
 
 @keyframes cwzs24 {
-    from {
-        top: .1rem;
+    0% {
+        transform: translateY(.1rem);
     }
-    to {
-        top: 0;
+    100% {
+        transform: translateY(0);
     }
 }
 
 @-webkit-keyframes cwzs24 {
-    from {
-        top: .1rem;
+    0% {
+        transform: translateY(.1rem);
     }
-    to {
-        top: 0;
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -314,24 +208,6 @@
     -o-animation: cwzs24 2s ease-in-out infinite alternate;
 }
 
-@keyframes cwzs25 {
-    from {
-        left: 20%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
-@-webkit-keyframes cwzs25 {
-    from {
-        left: 20%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
 .cwzs2-2 img:nth-child(5) {
     position: absolute;
     left: 50%;
@@ -339,10 +215,6 @@
     margin-left: -1.785rem;
     width: 3.57rem;
     height: .635rem;
-    /* animation: cwzs25 1s;
-    -moz-animation: cwzs25 1s;
-    -webkit-animation: cwzs25 1s;
-    -o-animation: cwzs25 1s; */
 }
 
 .cwzs2-2-1 {
@@ -438,20 +310,20 @@
 }
 
 @keyframes cwzs31 {
-    from {
-        transform: rotateZ(0deg) scale(0.5)
+    0% {
+        transform: rotateZ(0deg) scale(0.5);
     }
-    to {
-        transform: rotateZ(360deg) scale(1)
+    100% {
+        transform: rotateZ(360deg) scale(1);
     }
 }
 
 @-webkit-keyframes cwzs31 {
-    from {
-        transform: rotateZ(0deg) scale(0.5)
+    0% {
+        transform: rotateZ(0deg) scale(0.5);
     }
-    to {
-        transform: rotateZ(360deg) scale(1)
+    100% {
+        transform: rotateZ(360deg) scale(1);
     }
 }
 
@@ -889,6 +761,10 @@
     margin: 0 5px;
 }
 
+#cwzs6 {
+    overflow: hidden;
+}
+
 .cwzs6-2 {
     height: 2rem;
     width: 100%;
@@ -1231,7 +1107,8 @@
 
 #bus-join .bus-phone .bus-phone-l .copyright {
     color: #ccc;
-    padding: .3rem 0;
+    padding-bottom: .3rem;
+    padding-top: .1rem;
     font-size: 0.12rem;
     text-align: center;
     margin-top: 0;
@@ -1279,7 +1156,7 @@
 #bus-join .bus-phone .bus-phone-l>div p {
     color: #fff;
     font-size: .12rem;
-    width: 2rem;
+    width: 2.1rem;
 }
 
 #bus-join .bus-form {
@@ -1307,7 +1184,7 @@
     height: 1.36rem;
     width: 100%;
     padding-top: .1rem;
-    text-indent: .1rem;
+    padding-left: .1rem;
     color: #333;
     font-size: .12rem;
     border: 0;
@@ -1346,7 +1223,7 @@
     height: .4rem;
     background: #fff;
     border: 0;
-    color: #333;
+    color: #666;
     float: left;
     outline: none;
     margin-bottom: .1rem;
@@ -1382,4 +1259,11 @@
     display: inline-block;
     width: 142px;
     height: 242px;
+}
+
+.cw_erweima {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    margin: 10px auto 0;
 }
