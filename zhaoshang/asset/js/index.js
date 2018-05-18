@@ -1,4 +1,10 @@
 (function() {
+    //cwzs1-----自定义旋转
+    $('#cwzs1').on('inview.scrollspy.amui', function() {
+        $(".cw_dong1").addClass("animate_dong1");
+        $(".cw_dong2").addClass("animate_dong2");
+        $(".cw_dong3").addClass("animate_dong3");
+    }).on('outview.scrollspy.amui', function() {});
     //cwzs3-----自定义旋转
     $('.cwzs3-2').on('inview.scrollspy.amui', function() {
         $(this).children().addClass("animate");
@@ -13,7 +19,7 @@
                 $(this).addClass("active");
             }
         })
-    }
+    };
     var initSwiper = {
         direction: 'horizontal',
         initialSlide: 0,
@@ -25,7 +31,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son1 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon1.slideTo(0);
                 swiperSon1.startAutoplay();
@@ -40,7 +46,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son2 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon2.slideTo(0);
                 swiperSon1.stopAutoplay();
@@ -55,7 +61,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son3 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon3.slideTo(0);
                 swiperSon1.stopAutoplay();
@@ -70,7 +76,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son4 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon4.slideTo(0);
                 swiperSon1.stopAutoplay();
@@ -85,7 +91,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son5 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon5.slideTo(0);
                 swiperSon1.stopAutoplay();
@@ -100,7 +106,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son6 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon6.slideTo(0);
                 swiperSon1.stopAutoplay();
@@ -115,7 +121,7 @@
                 $(".swiper-container-son .swiper-slide").each(function() {
                     $(this).addClass("visibility");
                     $(".swiper-container-son7 .swiper-slide").removeClass("visibility");
-                })
+                });
                 step(swiper.activeIndex);
                 swiperSon7.slideTo(0);
                 swiperSon1.stopAutoplay();
@@ -136,7 +142,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == $(".swiper-container-son1 .swiper-slide").length - 1) {
@@ -151,7 +157,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == $(".swiper-container-son2 .swiper-slide").length - 1) {
@@ -171,7 +177,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == $(".swiper-container-son3 .swiper-slide").length - 1) {
@@ -191,7 +197,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == $(".swiper-container-son4 .swiper-slide").length - 1) {
@@ -211,7 +217,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == $(".swiper-container-son5 .swiper-slide").length - 1) {
@@ -231,7 +237,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == $(".swiper-container-son6 .swiper-slide").length - 1) {
@@ -251,7 +257,7 @@
         direction: 'horizontal',
         pagination: '.swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         onTouchEnd: function(swiper) {
             if (swiper.activeIndex == 0) {
@@ -284,14 +290,29 @@
         direction: 'horizontal',
         pagination: '.cwzs6-swiper-pagination',
         lazyLoading: true,
-        autoplay: 2000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: false,
         loop: true,
     });
+    //荣誉见证
+    var cwzs8_Swiper = new Swiper('.cwzs8-swiper-container', {
+        direction: 'horizontal',
+        pagination: '.cwzs8-swiper-pagination',
+        lazyLoading: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false,
+        loop: true,
+    });
+    //cwzs8-----自定义旋转
+    cwzs8_Swiper.stopAutoplay();
+    $('.cwzs8-2').on('inview.scrollspy.amui', function() {
+        cwzs8_Swiper.startAutoplay();
+    }).on('outview.scrollspy.amui', function() {
 
+    });
     // 招募品牌轮播
     var swiper_rem5 = new Swiper('#bus-brand .swiper-container', {
-        autoplay: 2000,
+        autoplay: 3000,
         speed: 500,
         lazyLoading: true,
         autoplayDisableOnInteraction: false,
