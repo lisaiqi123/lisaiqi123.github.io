@@ -225,7 +225,7 @@ window.onload = function() {
                     // $.post(url, { share: share, open: open }, function(data) {
                     // var item = data.item; //获取奖品停的位置
                 var html = "";
-                rotateFn(2, turnplate.restaraunts[item - 1], html, nums);
+                rotateFn(2, turnplate.restaraunts[1], html, nums);
                 // })
             } else {
                 $("#awardNum").text(0);
