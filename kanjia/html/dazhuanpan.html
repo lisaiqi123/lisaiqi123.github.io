@@ -2,18 +2,21 @@
 <html lang="zh-Hans">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta http-equiv="Cache" content="no-cache">
-    <title>商品分类</title>
-    <link rel="stylesheet" href="../css/common/framework7.ios.min.css">
-    <link rel="stylesheet" href="../css/common/framework7.ios.colors.min.css">
-    <link rel="stylesheet" href="../css/common/common-new.css">
-    <link rel="stylesheet" href="../css/toast.css">
-    <link rel="stylesheet" href="../css/common/flex.css">
-    <link rel="stylesheet" href="../css/dazhuanpan.css">
+    <title>dazhuanpan</title>
+    <link rel="stylesheet" href="/weixin/css/common/framework7.ios.min.css">
+    <link rel="stylesheet" href="/weixin/css/common/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_459702_b9lz8kfptak.css">
+    <link rel="stylesheet" href="/weixin/css/common/common-new.css">
+    <link rel="stylesheet" href="/weixin/css/common/flex.css">
+    <link rel="stylesheet" href="/weixin/css/turntable.css">
+    <link rel="stylesheet" href="/weixin/www/css/invite.css">
     <script>
         var Width = window.innerWidth;
         if (Width > 720) {
@@ -39,38 +42,88 @@
         <div class="view view-main">
             <div class="pages">
                 <div data-page="index" class="page personal-center">
-                    <div class="page-content homebox">
-                        <!-- 标题 -->
-                        <div class="cover-div">
-                            <img src="../images/pan-title.gif" alt="">
-                        </div>
+                    <div class="page-content">
                         <!--转盘-->
-                        <div class="banner">
-                            <div class="turnplate">
-                                <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
-                                <!-- 0未开始 1进行中 2已结束 -->
-                                <img class="pointer" src="../images/GO.png" data-status="1">
+                        <div class="overflow">
+                            <div class="my-award">
+                                <a href="javascript:;" class="alert-award" data-url="" data-openid=""></a>
                             </div>
-                            <!-- <img id="scream" src="../images/bg8.png" alt="" class="hidden"> -->
-                            <img id="scream" src="../images/bg6.png" alt="" class="hidden">
-                            <!-- <img id="scream" src="../images/bg4.png" alt="" class="hidden"> -->
-                        </div>
-                        <!-- 参与人数及抽奖机会 -->
-                        <div class="template3">
-                            <p>已有256人参与</p>
-                            <!--状态一：：： data-status="0"为分享后 -->
-                            <!-- <p>您今天还有 <span id="awardNum" data-status="0">1</span> 次抽奖机会</p> -->
-                            <!--状态二：：： data-status="1"为正常 -->
-                            <p>您今天还有 <span id="awardNum" data-status="1">2</span> 次抽奖机会</p>
+                            <div class="banner">
+                                <div class="turnplate fl-row-center">
+                                    <img src="../images/rotate/rotate1.png" alt="" class="rotate1">
+                                    <img src="../images/rotate/rotate2.png" alt="" class="rotate2">
+                                    <!-- 0未开始 1进行中 2已结束 -->
+                                    <canvas class="item" id="wheelcanvas" width="1200" height="1200"></canvas>
+                                    <img class="pointer" src="../images/rotate/GO.png" data-status="1" data-href="" data-openid="" data-total="12" data-person="1">
+                                </div>
+                                <!-- <img src="../images/rotate/card.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img id="scream" src="../images/rotate/bg8.png" alt="" class="hidden"> -->
 
-                        </div>
-                        <div class="fl-row-justy template3">
-                            <a href="javascript:;" class="alert-guize">活动说明</a>
-                            <a href="javascript:;" class="alert-my">我的奖品</a>
-                        </div>
-                        <!-- 广告图 -->
-                        <div class="template4 fl-row-leftStartNowrap">
-                            <a href="javascript:;"><img src="../images/pic-activity.png" alt=""></a>
+                                <!-- <img src="../images/rotate/card.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/rotate1.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img id="scream" src="../images/rotate/bg6.png" alt="" class="hidden"> -->
+
+                                <img src="../images/rotate/card.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img src="../images/rotate/nothing.png" alt="" class="hidden canvas-gift">
+                                <img id="scream" src="../images/rotate/bg4.png" alt="" class="hidden">
+
+                            </div>
+                            <!-- 参与人数及抽奖机会 -->
+                            <div class="template3 fl-column-center">
+                                <p class="a">已有<span>12</span>人参与</p>
+                                <!--状态二：：： data-status="1"为正常 -->
+                                <p class="b">还有 <span id="awardNum" data-status="0" data-share="1">1</span> 次抽奖机会 | <em class="alert-guize">活动说明</em><i class="icon icon-xiangyou"></i></p>
+                            </div>
+                            <!-- 当前门店 -->
+                            <div class="store-list">
+                                <a class="search-store-item external fl-row-center" href="JavaScript:;">
+                                    <div class="item-out">
+                                        <div class="img-box">
+                                            <img src="../images/rotate/rotate1.png" alt="">
+                                        </div>
+                                        <div class="store-des">
+                                            <p class="G-Fsize-14 G-Fweight-700 G-color-333 G-Mb-10">方太居然之家北四环店还差五个字</p>
+                                            <div class="G-flex-cb G-Mb-8">
+                                                <div class="G-flex-cc">
+                                                    <div class="start-con G-flex-cc">
+                                                        <i class="icon-pingfen3 icon"></i>
+                                                        <i class="icon-pingfen3 icon"></i>
+                                                        <i class="icon-pingfen3 icon"></i>
+                                                        <i class="icon-pingfen3 icon"></i>
+                                                        <i class="icon-pingfen3 icon"></i>
+                                                        <span class="G-Fsize-9 G-Fweight-700 g-color-orange">5.0</span>
+                                                    </div>
+                                                </div>
+                                                <p></p>
+                                                <p class=" G-Fweight-700 G-color-999 G-Fsize-9"><i class="icon icon-dingwei G-Fsize-9 g-color-orange G-rest-icon"></i> 距离 2.0 km
+                                                </p>
+                                            </div>
+                                            <div class="spu-con G-one-cloum G-flex">
+                                                <p class="fl-row-left">
+                                                    <span>油烟机</span>
+                                                    <span>油烟机</span>
+                                                </p>
+                                            </div>
+                                            <div class="brand-con G-one-cloum fl-row-left">
+                                                <span>放他</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,131 +131,73 @@
         </div>
     </div>
     <div class="share-masked" hidden></div>
-    <script type="text/template" id="discription">
-        <div class="model-share">
-            <div class="model-con">
-                <div class="model-con-inner">
+    <div class="model-overlays"></div>
+    <!-- 活动说明 -->
+    <div id="discription" hidden>
+        <div class="dis-share">
+            <div class="dis-con">
+                <div class="dis-con-inner">
+                    <h1>活动说明</h1>
                     <h3>活动奖品</h3>
-                    <div class="model-second">
-                        <p class="fl-row-leftStart"><span>一等奖</span><span>iPhoneX</span></p>
-                        <p class="fl-row-leftStart"><span>二等奖</span><span>榨汁机</span></p>
-                        <p class="fl-row-leftStart"><span>三等奖</span><span>电饭锅</span></p>
+                    <div class="dis-second">
+                        <p class="fl-row-leftStart"><span>一等奖</span><span>蛋黄月饼</span></p>
+
                     </div>
                     <h3>活动时间</h3>
-                    <div class="model-second">
-                        <p class="fl-row-leftStart">2018年4月15日 10:00 - 2018年4月17日 10:00</p>
+                    <div class="dis-second">
+                        <p class="fl-row-leftStart">2018.05.01 - 2.19.05.01</p>
                     </div>
                     <h3>活动说明</h3>
-                    <div class="model-second">
-                        <p>1.邀请好友一起砍价，24小时内看到最低价就可以以此价格下单</p>
-                        <p>2.阿斯顿空间放卡罗傻到家啊塑料袋快放假阿是快递费见</p>
-                        <p>3.啥地方少点啦看风景阿卢卡斯的减肥</p>
-                        <p>4.阿斯顿法师打发士大夫阿斯顿发送到</p>
-                        <p>5.阿里速度快及法律啥款到即发啊阿斯顿快放假是否</p>
-                        <p>6.阿斯顿发斯蒂芬</p>
-                        <p>7.完成下单即可完成所有操作</p>
+                    <div class="dis-second dis-intro">
+                        没有说明
                     </div>
                 </div>
             </div>
         </div>
-    </script>
-    <!-- 活动说明 -->
-    <script type="text/template" id="myAward">
-        <div class="model-share">
-            <div class="model-con">
-                <div class="model-con-inner">
-                    <!-- 没有抽奖记录 -->
-                    <div class="model-no">
-                        抱歉，暂无抽中奖品
-                    </div>
-                    <!-- 有抽奖记录 -->
-                    <div class="model-item">
-                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                        <p class="model-item3 fl-row-left">未领取</p>
-                        <a class="external" href="javascript:;">兑换</a>
-                    </div>
-                    <div class="model-item">
-                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                        <p class="model-item3 gray fl-row-left">已领取</p>
-                        <a class="external gray" href="javascript:;">兑换</a>
-                    </div>
-                    <div class="model-item">
-                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                        <p class="model-item3 gray fl-row-left">已领取</p>
-                        <a class="external gray" href="javascript:;">兑换</a>
-                    </div>
-                    <div class="model-item">
-                        <p class="model-item1 fl-row-left"><span>一等奖 ***</span><span>折扣券</span></p>
-                        <p class="model-item2 fl-row-left">有效期 2018.4.15 至 2018.4.17</p>
-                        <p class="model-item3 fl-row-left">未领取</p>
-                        <a class="external" href="javascript:;">兑换</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </script>
+        <img src="../images/rotate/close.png" alt="" class="close-btn close">
+    </div>
     <!-- 我的奖品 -->
-    <script type="text/template" id="award-con">
-        <div class="model-div fl-column-centerTop">
-            <span class="award-pic"><img src="../images/pic-phone.png" alt=""></span>
-            <p class="award-title">Apple iPhone X 256GB 深空灰 移动联通 电信4G手机</p>
-            <p class="award-intro">完善下方信息，立即领取奖品</p>
-            <p class="award-input"><input type="text" placeholder="请填写姓名" class="censor" name="name" />
-                <a></a>
-            </p>
-            <p class="award-input"><input type="tel" placeholder="请填写手机号" class="censor" name="phoneNum" />
-                <a></a>
-            </p>
-            <div class="award-input fl-row-justy">
-                <p class="relative">
-                    <input type="tel" placeholder="验证码" class="verify-code censor" name="verify-code">
-                    <a></a>
-                </p>
-                <span id="require-code" class="require-code">获取验证码</span>
-            </div>
-        </div>
-        <!-- 状态1  获取奖品为除了优惠券 的button按钮 -->
-        <div class="button1">
-            <span class="button2"><a href="javascript:;" class="ling gray" disabled>领取</a></span>
-        </div>
-        <!-- 状态2  获取奖品为优惠券 的button按钮 -->
-        <!-- <div class="button1">
-            <span class="button2"><a href="javascript:;" class="lingqu">领取</a></span>
-        </div> -->
-    </script>
-    <!-- 未中奖还有抽奖次数 -->
-    <script type="text/template" id="noawardNum">
-        <div class="model-div">
-            <p class="model-now">好可惜</p>
-            <p class="model-last">差一点就中奖了~</p>
-        </div>
-    </script>
-    <!-- 未中奖没有抽奖次数 -->
-    <script type="text/template" id="noaward">
-        <div class="model-div">
-            <p class="model-now">好可惜</p>
-            <p class="model-center">差一点就中奖了~</p>
-            <p class="model-last pink">分享给微信好友或朋友圈可多抽一次哦~</p>
-        </div>
-    </script>
+    <div id="award-con" hidden></div>
+    <!-- 获取奖品 -->
+    <div id="get-award" hidden></div>
     <!-- 活动未开始 -->
-    <script type="text/template" id="nobegain">
-        <div class="model-div">
-            <p class="model-now">活动尚未开始</p>
-            <p class="model-last gray">开始时间为 2018-04-18 16:00</p>
+    <div id="nobegain" class="act-status" hidden>
+        <img src="../images/rotate/finish.png" alt="">
+        <div class="fl-column-center">
+            <p class="a">活动尚未开始</p>
+            <p class="b">开始时间为 2016.1.2</p>
+            <p class="c close">我知道了</p>
         </div>
-    </script>
+    </div>
     <!-- 活动已结束 -->
-    <script type="text/template" id="finished">
-        <div class="model-div">
-            <p class="model-now">活动已结束</p>
-            <p class="model-last gray">请关注期待下次活动~</p>
+    <div id="finished" class="act-status" hidden>
+        <img src="../images/rotate/finish.png" alt="">
+        <div class="fl-column-center">
+            <p class="a">活动已结束</p>
+            <p class="b">请关注下次活动~</p>
+            <p class="c close">我知道了</p>
         </div>
-    </script>
+    </div>
+    <!-- 未中奖还有抽奖次数 -->
+    <div id="noawardNum" class="act-num" hidden>
+        <img src="../images/rotate/guize-bg.png" alt="" class="bg">
+        <div class="fl-column-center">
+            <p class="a">好可惜<br/>差一点就中奖了~</p>
+            <p class="b close">再试一次</p>
+        </div>
+        <img src="../images/rotate/close.png" alt="" class="close-btn close">
+    </div>
+    <!-- 未中奖没有抽奖次数 -->
+    <div id="noaward" class="act-num" hidden>
+        <img src="../images/rotate/guize-bg.png" alt="" class="bg">
+        <div class="fl-column-center">
+            <p class="a">好可惜<br/>差一点就中奖了~</p>
+            <p class="b share-friend">分享好友</p>
+            <p class="c">分享给微信好友或朋友圈可多抽1次哦~</p>
+        </div>
+        <img src="../images/rotate/close.png" alt="" class="close-btn close">
+    </div>
+
     <!-- 非微信打开 -->
     <script type="text/template" id="saas">
         <div class="model-div">
