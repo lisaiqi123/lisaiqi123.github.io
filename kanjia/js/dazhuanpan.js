@@ -167,9 +167,6 @@ window.onload = function() {
         $("canvas.item").fadeIn();
         $("img.pointer").fadeIn();
     });
-    var value = $('.prize').val();
-    value = value.substring(0, value.length - 1);
-    var prize = value.split(',');
     // turnplate.restaraunts = ["谢谢参与", "一等奖", "二等奖", "三等奖", "谢谢参与", "四等奖", "五等奖", "六等奖"];
     turnplate.restaraunts = ["谢谢参与", "一等奖", "二等奖", "三等奖", "四等奖", "五等奖"];
     // turnplate.restaraunts = ["谢谢参与", "一等奖", "红包奖", "二等奖"];
