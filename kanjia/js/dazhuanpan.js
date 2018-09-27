@@ -222,11 +222,11 @@ window.onload = function() {
                 var url = $(this).data('href');
                 var share = $('#awardNum').data('share');
                 var open = $(this).data('openid')
-                $.post(url, { share: share, open: open }, function(data) {
-                    var item = data.item; //获取奖品停的位置
-                    var html = data.html;
-                    rotateFn(item, turnplate.restaraunts[item - 1], html, nums);
-                })
+                    // $.post(url, { share: share, open: open }, function(data) {
+                var item = data.item; //获取奖品停的位置
+                var html = "";
+                rotateFn(2, turnplate.restaraunts[item - 1], html, nums);
+                // })
             } else {
                 $("#awardNum").text(0);
                 if ($("#awardNum").data("status") == 0) {
