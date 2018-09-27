@@ -239,6 +239,32 @@ window.onload = function() {
             }
         }
     });
+    //旋转转盘 item:奖品位置; txt：提示语;
+    var rotateFn = function(item, txt, html, nums) {
+        var angles = item * (360 / turnplate.restaraunts.length) - 360 / (turnplate.restaraunts.length * 2);
+        if (angles < 270) {
+            angles = 270 - angles;
+        } else {
+            angles = 360 - angles + 270;
+        }
+        $("#wheelcanvas").stopRotate();
+        $("#wheelcanvas").rotate({
+            angle: 0,
+            animateTo: angles + 1800,
+            duration: 6000,
+            callback: function() {
+                nums--;
+                $("#awardNum").text(nums);
+                if (txt.indexOf("谢谢参与") != -1) {
+                    model("#noawardNum");
+                } else {
+                    model("#get-award");
+                    $("#get-award").html(html);
+                }
+                turnplate.bRotate = !turnplate.bRotate;
+            }
+        });
+    };
 };
 
 function model(el) {
